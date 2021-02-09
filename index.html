@@ -1,0 +1,61 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Coronavirus charts</title>
+    <link rel="stylesheet" type="text/css" href="corona.css">
+    <script type="text/javascript">
+        function setActive(id) {
+            document.getElementById('about').classList.remove("active");
+            document.getElementById('l1').classList.remove("active");
+            document.getElementById('l2').classList.remove("active");
+            document.getElementById('l3').classList.remove("active");
+            document.getElementById('l4').classList.remove("active");
+            document.getElementById('l5').classList.remove("active");
+            document.getElementById('l6').classList.remove("active");
+            document.getElementById('l7').classList.remove("active");
+            document.getElementById('l8').classList.remove("active");
+            document.getElementById('l9').classList.remove("active");
+            document.getElementById('l10').classList.remove("active");
+
+            document.getElementById(id).classList.add("active");
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Warning: most countries are not updated since 2020 december 14, because the main source used switched to weekly updates.
+                See <a id="about" onclick="getElementById('iframe').src='about.html'; setActive('about');">About</a></th>
+        </tr>
+    </table>
+    <br/>
+    <table>
+        <tr>
+            <th>Absolute numbers:</th>
+            <td><a id="l1" onclick="getElementById('iframe').src='generated/daily-deaths.html'; setActive('l1');">Daily Deaths</a></td>
+            <td><a id="l2" onclick="getElementById('iframe').src='generated/total-deaths.html'; setActive('l2');">Total Deaths</a></td>
+            <td></td>
+            <td></td>
+            <td><a id="about" onclick="getElementById('iframe').src='about.html'; setActive('about');" class="active">About</a></td>
+        </tr>
+        <tr>
+            <th>Per population:</th>
+            <td><a id="l3" onclick="getElementById('iframe').src='generated/daily-deaths-per-population.html'; setActive('l3');">Daily Deaths</a></td>
+            <td><a id="l4" onclick="getElementById('iframe').src='generated/total-deaths-per-population.html'; setActive('l4');">Total Deaths</a></td>
+            <td><a id="l5" onclick="getElementById('iframe').src='generated/deaths-per-population-last-day-map.html'; setActive('l5');">Map of Last Day's Deaths</a></td>
+            <td><a id="l6" onclick="getElementById('iframe').src='generated/deaths-per-population-total-map.html'; setActive('l6');">Map of All Deaths</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Cases per population:</th>
+            <td><a id="l9" onclick="getElementById('iframe').src='generated/daily-cases-per-population.html'; setActive('l9');">Daily New Cases</a></td>
+            <td><a id="l10" onclick="getElementById('iframe').src='generated/total-cases-per-population.html'; setActive('l10');">Total Cases</a></td>
+            <td><a id="l7" onclick="getElementById('iframe').src='generated/cases-per-population-last-day-map.html'; setActive('l7');">Map of Last Day's Cases</a></td>
+            <td><a id="l8" onclick="getElementById('iframe').src='generated/cases-per-population-total-map.html'; setActive('l8');">Map of All Cases</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <iframe id="iframe" src="about.html"></iframe>
+</body>
+</html>

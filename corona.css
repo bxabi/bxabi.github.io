@@ -1,0 +1,47 @@
+#iframe {
+    width:100%;
+    height:calc(100% - 75px);
+    border: none;
+    margin-top: 5px;
+}
+
+td,th {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+a {
+    cursor: pointer;
+    color: blue;
+}
+
+.active {
+    font-weight: bold;
+}
+
+th {
+  text-align: right;
+}
+
+/*#about {
+    border-left: 1px solid #CCCCCC;
+}
+#l6 {
+    border-right: 1px solid #CCCCCC;
+}*/
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    font-size: 12px;
+}
+
+td {
+    border-left: 1px solid #CCCCCC;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+th {
+    border-bottom: 1px solid #CCCCCC;
+}
